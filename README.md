@@ -1,31 +1,25 @@
-ASCII Art Converter
-Overview
-This Python script converts an image into ASCII art. It resizes the image to a specified scale and replaces each pixel with an ASCII character based on its brightness level.
+# ASCII Art Converter
 
-Requirements
-Python 3.x
-Pillow (Python Imaging Library)
-Installation
-Clone this repository or download the ascii_converter.py file.
-Install Pillow library using pip:
-Copy code
-pip install Pillow
-Usage
-Import the asciiConvert function from ascii_converter.py into your Python script.
-Call the asciiConvert function with the following parameters:
-image: Path to the input image file.
-type: File format of the input image (e.g., "jpg", "png").
-saveas: Path to save the ASCII art file.
-scale: Scaling factor for resizing the image (larger values create smaller ASCII art).
-Example:
+This Python script converts an image file to ASCII art. The resulting ASCII art is saved to a text file.
 
-python
-Copy code
-from ascii_converter import asciiConvert
+## Usage
 
-asciiConvert("my-image.jpg", "jpg", "ascii-art.txt", "3")
-Notes
-The script converts each pixel's brightness to an ASCII character based on predefined brightness ranges. You can modify these ranges in the script for different ASCII representations.
-Experiment with different scaling factors (scale parameter) to achieve desired ASCII art size and detail.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. Install the `PIL` library:
+
+    ```
+    pip install pillow
+    ```
+
+2. Rename your image to "my-image" and replace it with the allready given image.
+
+3. Use the `asciiConvert` function to convert an image to ASCII art:
+
+    ```python
+    from PIL import Image
+
+    def asciiConvert(image, type, saveas, scale):
+        # Function content...
+
+    if __name__ == '__main__':
+        asciiConvert("my-image.jpg", "jpg", "ascii-art.txt", "3")
+    ```
